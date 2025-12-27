@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { ToastProvider } from './context/ToastContext';
 import { useLocalStorage, useTheme } from './hooks/useCustomHooks';
 import { DESTINATIONS_DATA } from './data/constants';
@@ -184,6 +185,7 @@ export default function App() {
         />
 
         </div>
+        <Analytics />
     </ToastProvider>
   );
 }
